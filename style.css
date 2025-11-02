@@ -148,7 +148,8 @@ nav a.active {
 
 /* Header/Site Title */
 .site-header {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .site-title {
