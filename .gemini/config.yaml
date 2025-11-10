@@ -1,0 +1,15 @@
+# .gemini/config.yaml
+
+# This tells the Gemini CLI how to run against the repository.
+global_settings:
+  # Reference the style guide you created
+  style_guide_path: .gemini/mlsecops-styleguide.md
+
+# This section tells the AI what to exclude from review
+file_exclusions:
+  # Ignore files that are not documentation (e.g., binaries, large data)
+  - 'projects/inference-gateway/data/*'
+  - 'infrastructure/terraform/*.tfstate'
+
+# Note: You can also use a .aiexclude file, similar to .gitignore, 
+# to specify files that the AI should ignore.
