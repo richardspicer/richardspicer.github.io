@@ -8,24 +8,24 @@
   --text-main: #a9b1d6;          /* Primary text */
   --text-bright: #c0caf5;        /* Brighter text for emphasis */
   --text-muted: #565f89;         /* Subtle text, comments */
-  
+
   /* Warm Accents - The "pop" colors */
   --accent-red: #f7768e;         /* Bright pink/red - primary pop */
   --accent-orange: #ff9e64;      /* Orange - secondary pop */
   --accent-yellow: #e0af68;      /* Yellow/gold - headings */
-  
+
   /* Cool Accents */
   --accent-blue: #7aa2f7;        /* Blue - links, interactive */
   --accent-cyan: #7dcfff;        /* Cyan - secondary links */
   --accent-magenta: #bb9af7;     /* Purple - special elements */
   --accent-green: #9ece6a;       /* Green - success states */
-  
+
   --border-color: #414868;       /* Borders, dividers */
-  
+
   /* Typography */
   --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Courier New', monospace;
-  
+
   /* Spacing */
   --content-max-width: 700px;
   --spacing-unit: 1rem;
@@ -148,7 +148,8 @@ nav a.active {
 
 /* Header/Site Title */
 .site-header {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .site-title {
@@ -296,15 +297,15 @@ footer {
   body {
     padding: 1rem 0.75rem;
   }
-  
+
   h1 {
     font-size: 1.75rem;
   }
-  
+
   h2 {
     font-size: 1.35rem;
   }
-  
+
   nav ul {
     gap: 1rem;
   }
