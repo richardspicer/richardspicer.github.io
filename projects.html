@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MLSecOps projects and lab work by Richard Spicer">
+    <meta name="author" content="Richard Spicer">
+    <title>Projects | Richard Spicer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Site Header -->
+        <header class="site-header">
+            <h1 class="site-title">richardspicer.io</h1>
+            <p class="site-tagline">MLSecOps Engineer</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <h1>Projects</h1>
+            
+            <p>Production ML infrastructure and security implementations. Chronological list of deployed systems and learning projects.</p>
+            
+            <section>
+                <h2>2025</h2>
+                
+                <!-- Project Template -->
+                <div class="card">
+                    <h3>Inference Gateway</h3>
+                    <p class="meta">October 2025 | <span class="badge badge-active">Active</span></p>
+                    
+                    <p>FastAPI-based authentication and rate limiting layer for self-hosted Ollama LLM server. Solves the "everyone can DOS your GPU" problem.</p>
+                    
+                    <p><strong>Tech Stack:</strong> Python, FastAPI, Redis, Ollama</p>
+                    
+                    <p><strong>Why it matters:</strong> Self-hosted LLMs need production-grade access control.</p>
+                    
+                    <p><strong>Status:</strong> Production, serving requests daily.</p>
+                    
+                    <p><strong>Links:</strong> <a href="https://github.com/richardspicer/inference-gateway">GitHub</a> | <a href="#">Technical Writeup</a></p>
+                    
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>API key authentication</li>
+                        <li>Per-user rate limiting</li>
+                        <li>Request/response logging</li>
+                        <li>Health monitoring endpoints</li>
+                    </ul>
+                    
+                    <p><strong>What I learned:</strong> Protecting GPU resources requires different thinking than traditional API rate limiting. Token-based costs vs request-based costs.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>MLSecOps Production Lab</h3>
+                    <p class="meta">October 2025 | <span class="badge badge-active">Active</span></p>
+                    
+                    <p>3-node Proxmox cluster with segregated VLANs, ZFS storage, GPU workstation. Infrastructure-as-code for reproducible ML environments.</p>
+                    
+                    <p><strong>Tech Stack:</strong> Proxmox, ZFS, Ansible, VLANs 40/50/99x</p>
+                    
+                    <p><strong>Why it matters:</strong> Production ML needs production infrastructure.</p>
+                    
+                    <p><strong>Status:</strong> Operational, continuously evolved.</p>
+                    
+                    <p><strong>Links:</strong> <a href="#">Architecture Overview</a> | <a href="#">Network Topology</a></p>
+                    
+                    <p><strong>Key Components:</strong></p>
+                    <ul>
+                        <li>3-node HA cluster with ZFS storage</li>
+                        <li>Segregated network zones for dev/prod/management</li>
+                        <li>GPU passthrough for ML workloads</li>
+                        <li>Automated backup and snapshot strategy</li>
+                    </ul>
+                    
+                    <p><strong>What I learned:</strong> Enterprise ML infrastructure at homelab cost is possible with the right architecture decisions.</p>
+                </div>
+                
+                <!-- Template for future projects:
+                <div class="card">
+                    <h3>Project Name</h3>
+                    <p class="meta">Month Year | <span class="badge badge-wip">WIP</span></p>
+                    
+                    <p>Brief description of what this project does and why it exists.</p>
+                    
+                    <p><strong>Tech Stack:</strong> Technologies used</p>
+                    <p><strong>Why it matters:</strong> Business/technical justification</p>
+                    <p><strong>Status:</strong> Current state</p>
+                    <p><strong>Links:</strong> <a href="#">GitHub</a> | <a href="#">Docs</a></p>
+                    
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>Feature one</li>
+                        <li>Feature two</li>
+                    </ul>
+                    
+                    <p><strong>What I learned:</strong> Key technical insight or lesson</p>
+                </div>
+                -->
+            </section>
+            
+            <!-- Future year sections -->
+            <!--
+            <section>
+                <h2>2026</h2>
+                <p><em>Projects from 2026 will appear here as they're completed.</em></p>
+            </section>
+            -->
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Richard Spicer</p>
+        </footer>
+    </div>
+</body>
+</html>
