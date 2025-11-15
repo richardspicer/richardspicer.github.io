@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MLSecOps projects and lab work by Richard Spicer">
+    <meta name="description" content="MLSecOps lab projects and infrastructure builds">
     <meta name="author" content="Richard Spicer">
     <title>Projects | Richard Spicer</title>
     <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
         <!-- Site Header -->
         <header class="site-header">
             <h1 class="site-title">richardspicer.io</h1>
-            <p class="site-tagline">MLSecOps Engineer</p>
+            <p class="site-tagline">Learning MLSecOps</p>
         </header>
 
         <!-- Navigation -->
@@ -28,94 +28,95 @@
 
         <!-- Main Content -->
         <main>
-            <h1>Projects</h1>
+            <h1>Lab Projects</h1>
             
-            <p>Production ML infrastructure and security implementations. Chronological list of deployed systems and learning projects.</p>
+            <p>Production-grade infrastructure and MLSecOps implementations. Documenting what I build as I learn.</p>
             
             <section>
                 <h2>2025</h2>
                 
-                <!-- Project Template -->
+                <!-- MLSecOps Lab Infrastructure -->
+                <div class="card">
+                    <h3>MLSecOps Production Lab</h3>
+                    <p class="meta">Deployed 2025 | <span class="badge badge-active">Active</span></p>
+                    
+                    <p>Enterprise-grade homelab infrastructure for learning ML operations. 3-node Proxmox cluster with network segregation, ZFS storage, and GPU acceleration.</p>
+                    
+                    <p><strong>Tech Stack:</strong> Proxmox VE, ZFS, Ansible, Terraform, VLANs, Datadog</p>
+                    
+                    <p><strong>Why it matters:</strong> Production ML requires production infrastructure. This lab demonstrates enterprise architecture at homelab cost.</p>
+                    
+                    <p><strong>Current Status:</strong></p>
+                    <ul>
+                        <li>3-node HA cluster operational</li>
+                        <li>Zone-based firewall with VLAN segmentation</li>
+                        <li>ZFS storage pools with backup strategy</li>
+                        <li>Datadog monitoring across all hosts</li>
+                        <li>Self-hosted Ollama LLM server (RTX 2060 SUPER)</li>
+                        <li>GPU development workstation (RTX 3060 Ti)</li>
+                    </ul>
+                    
+                    <p><strong>Links:</strong> <a href="https://github.com/richardspicer/mlsecops-lab">GitHub</a></p>
+                    
+                    <p><strong>What I'm learning:</strong> How to architect ML infrastructure with security controls—network isolation, access management, monitoring, and operational procedures.</p>
+                </div>
+                
+                <!-- Inference Gateway -->
                 <div class="card">
                     <h3>Inference Gateway</h3>
-                    <p class="meta">October 2025 | <span class="badge badge-active">Active</span></p>
+                    <p class="meta">November 2025 | <span class="badge badge-wip">Deployed, Offline</span></p>
                     
-                    <p>FastAPI-based authentication and rate limiting layer for self-hosted Ollama LLM server. Solves the "everyone can DOS your GPU" problem.</p>
+                    <p>FastAPI authentication and rate limiting layer for self-hosted Ollama LLM server. Built to solve the "anyone can DOS your GPU" problem when you expose inference endpoints.</p>
                     
                     <p><strong>Tech Stack:</strong> Python, FastAPI, Redis, Ollama</p>
                     
-                    <p><strong>Why it matters:</strong> Self-hosted LLMs need production-grade access control.</p>
+                    <p><strong>Current Status:</strong> Code complete and deployed, intentionally kept offline. Direct Ollama access (10.0.40.20:11434) is sufficient for current single-user learning phase.</p>
                     
-                    <p><strong>Status:</strong> Production, serving requests daily.</p>
+                    <p><strong>Activation Criteria:</strong></p>
+                    <ul>
+                        <li>Multi-user lab access requirements</li>
+                        <li>API key-based cost/usage tracking needs</li>
+                        <li>Production portfolio demonstration</li>
+                        <li>Rate limiting and security policy enforcement</li>
+                    </ul>
                     
-                    <p><strong>Links:</strong> <a href="https://github.com/richardspicer/inference-gateway">GitHub</a> | <a href="#">Technical Writeup</a></p>
-                    
-                    <p><strong>Key Features:</strong></p>
+                    <p><strong>Key Features (When Active):</strong></p>
                     <ul>
                         <li>API key authentication</li>
-                        <li>Per-user rate limiting</li>
-                        <li>Request/response logging</li>
+                        <li>Redis-backed rate limiting (60 req/min per key)</li>
+                        <li>Request/response audit logging</li>
+                        <li>Datadog metrics integration</li>
                         <li>Health monitoring endpoints</li>
                     </ul>
                     
-                    <p><strong>What I learned:</strong> Protecting GPU resources requires different thinking than traditional API rate limiting. Token-based costs vs request-based costs.</p>
+                    <p><strong>Links:</strong> <a href="https://github.com/richardspicer/mlsecops-lab/tree/main/projects/inference-gateway">GitHub</a></p>
+                    
+                    <p><strong>What I learned:</strong> Building the gateway taught me how protecting GPU resources differs from traditional API rate limiting—token-based costs vs request-based costs matter for ML workloads.</p>
                 </div>
-                
-                <div class="card">
-                    <h3>MLSecOps Production Lab</h3>
-                    <p class="meta">October 2025 | <span class="badge badge-active">Active</span></p>
-                    
-                    <p>3-node Proxmox cluster with segregated VLANs, ZFS storage, GPU workstation. Infrastructure-as-code for reproducible ML environments.</p>
-                    
-                    <p><strong>Tech Stack:</strong> Proxmox, ZFS, Ansible, VLANs 40/50/99x</p>
-                    
-                    <p><strong>Why it matters:</strong> Production ML needs production infrastructure.</p>
-                    
-                    <p><strong>Status:</strong> Operational, continuously evolved.</p>
-                    
-                    <p><strong>Links:</strong> <a href="#">Architecture Overview</a> | <a href="#">Network Topology</a></p>
-                    
-                    <p><strong>Key Components:</strong></p>
-                    <ul>
-                        <li>3-node HA cluster with ZFS storage</li>
-                        <li>Segregated network zones for dev/prod/management</li>
-                        <li>GPU passthrough for ML workloads</li>
-                        <li>Automated backup and snapshot strategy</li>
-                    </ul>
-                    
-                    <p><strong>What I learned:</strong> Enterprise ML infrastructure at homelab cost is possible with the right architecture decisions.</p>
-                </div>
-                
-                <!-- Template for future projects:
-                <div class="card">
-                    <h3>Project Name</h3>
-                    <p class="meta">Month Year | <span class="badge badge-wip">WIP</span></p>
-                    
-                    <p>Brief description of what this project does and why it exists.</p>
-                    
-                    <p><strong>Tech Stack:</strong> Technologies used</p>
-                    <p><strong>Why it matters:</strong> Business/technical justification</p>
-                    <p><strong>Status:</strong> Current state</p>
-                    <p><strong>Links:</strong> <a href="#">GitHub</a> | <a href="#">Docs</a></p>
-                    
-                    <p><strong>Key Features:</strong></p>
-                    <ul>
-                        <li>Feature one</li>
-                        <li>Feature two</li>
-                    </ul>
-                    
-                    <p><strong>What I learned:</strong> Key technical insight or lesson</p>
-                </div>
-                -->
             </section>
             
-            <!-- Future year sections -->
-            <!--
             <section>
-                <h2>2026</h2>
-                <p><em>Projects from 2026 will appear here as they're completed.</em></p>
+                <h2>What's Next</h2>
+                
+                <p><strong>December 2025:</strong> Complete Google Cloud ACE certification prep</p>
+                
+                <p><strong>Q1 2026:</strong></p>
+                <ul>
+                    <li>Google Cloud ACE certification (exam Feb 2)</li>
+                    <li>Deploy sandbox environment (VLAN 50 with pfSense gateway)</li>
+                    <li>First technical blog post documenting the MLSecOps learning journey</li>
+                </ul>
+                
+                <p><strong>Future Projects:</strong></p>
+                <ul>
+                    <li>Local AI assistant with RAG over lab documentation</li>
+                    <li>Kubernetes cluster for ML workload orchestration</li>
+                    <li>ML model security implementations (adversarial testing, guardrails)</li>
+                    <li>Advanced monitoring and observability stack</li>
+                </ul>
+                
+                <p>Every project gets documented as it's deployed. Check back or follow on <a href="https://github.com/richardspicer">GitHub</a> for updates.</p>
             </section>
-            -->
         </main>
 
         <!-- Footer -->
