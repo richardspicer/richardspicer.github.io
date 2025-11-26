@@ -3,54 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Richard Spicer - Building and securing production ML systems.">
+    <meta name="description" content="Richard Spicer - MLSecOps Engineer. Building and securing production ML systems.">
     <meta name="author" content="Richard Spicer">
     <title>Richard Spicer | MLSecOps Engineer</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Index page specific - vertically centered layout */
-        .index-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 80vh;
+        /* Single page adjustments */
+        .container {
+            padding: 2rem 0;
         }
-        
-        .index-container main {
-            text-align: center;
-            margin: 2rem 0;
+        section {
+            margin: 2.5rem 0;
         }
-        
-        .index-container footer {
-            margin-top: auto;
-            border-top: none;
+        .projects-list {
+            margin: 1rem 0;
         }
-        .index-container nav {
-            border-bottom: none;
+        .projects-list a {
+            display: block;
+            margin: 0.5rem 0;
         }
     </style>
 </head>
 <body>
-    <div class="container index-container">
-        <!-- Site Header -->
+    <div class="container">
+        <!-- Header -->
         <header class="site-header">
-            <h1 class="site-title">richardspicer.io</h1>
+            <h1 class="site-title">Richard Spicer</h1>
             <p class="site-tagline">MLSecOps Engineer</p>
         </header>
 
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-        </nav>
-
-        <!-- Main Content - Minimal Landing -->
+        <!-- Main Content -->
         <main>
-            <p>Building and securing production ML systems.</p>
+            <section>
+                <p>Security engineer building expertise in machine learning operations. I focus on the gap between deploying ML systems and securing them—a space where existing frameworks are still catching up.</p>
+            </section>
+
+            <section>
+                <h2>Projects</h2>
+                
+                <p><strong><a href="https://mlsecopslabs.io">MLSecOps Labs</a></strong><br>
+                Private R&D infrastructure. Proxmox cluster, self-hosted LLMs, GPU workstations, network segmentation. Where everything actually runs.</p>
+                
+                <p><strong><a href="https://mlsecops.fm">MLSecOps Field Manual</a></strong><br>
+                Public documentation and reproducible modules. What I learn in the lab, distilled into patterns others can use.</p>
+            </section>
+
+            <section>
+                <h2>Credentials</h2>
+                <p>
+                    <strong>CISSP</strong> – Certified Information Systems Security Professional<br>
+                    <strong>GCIH</strong> – GIAC Certified Incident Handler<br>
+                    <strong>GSEC</strong> – GIAC Security Essentials
+                </p>
+            </section>
+
+            <section id="how-i-work">
+                <h2>How I Work</h2>
+                
+                <p>I use a <strong>human-led, AI-augmented workflow</strong>. AI assistants help accelerate drafting, code exploration, and research—but every component is validated, rebuilt, and understood by me before it becomes part of a project.</p>
+                
+                <p>I view AI not as a substitute for expertise, but as a tool that amplifies learning and experimentation. All work I present reflects my genuine understanding, my hands-on engineering effort, and my commitment to honest, reproducible practice.</p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>
+                    <strong>Email:</strong> contact@richardspicer.io<br>
+                    <strong>GitHub:</strong> <a href="https://github.com/richardspicer">github.com/richardspicer</a>
+                </p>
+            </section>
         </main>
 
         <!-- Footer -->
