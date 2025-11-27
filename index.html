@@ -1,84 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Richard Spicer - MLSecOps Engineer. Building and securing production ML systems.">
-    <meta name="author" content="Richard Spicer">
-    <title>Richard Spicer | MLSecOps Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Single page adjustments */
-        .container {
-            padding: 2rem 0;
-        }
-        section {
-            margin: 2.5rem 0;
-        }
-        .projects-list {
-            margin: 1rem 0;
-        }
-        .projects-list a {
-            display: block;
-            margin: 0.5rem 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Richard Spicer - MLSecOps Engineer. Building and securing production ML systems.">
+  <title>Richard Spicer | MLSecOps Engineer</title>
+  <style>
+    :root {
+      --bg: #010409;
+      --border: #1e293b;
+      --text: #a9b1d6;
+      --text-bright: #c0caf5;
+      --muted: #565f89;
+      --accent: #7aa2f7;
+      --accent-alt: #f7768e;
+      --cyan: #7dcfff;
+      --green: #9ece6a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      background-image: url('assets/background.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--cyan);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .shell {
+      max-width: 900px;
+      width: 100%;
+      border-radius: 1.5rem;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top left, #0b1120 0, #020617 55%);
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.25rem;
+      color: var(--text-bright);
+    }
+
+    .tagline {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-alt);
+      margin-bottom: 1.5rem;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro:last-of-type {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.6rem 1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.6);
+      transition: border-color 0.15s ease, transform 0.1s ease;
+    }
+
+    .project-link:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .project-link span {
+      margin-left: 0.4rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .credentials {
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: var(--green);
+    }
+
+    .how-i-work {
+      margin-bottom: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(30, 41, 59, 0.5);
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .how-i-work p {
+      margin: 0.3rem 0;
+    }
+
+    .contact {
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .contact a {
+      margin: 0 0.5rem;
+    }
+
+    .footer {
+      padding-top: 1rem;
+      border-top: 1px solid rgba(30, 41, 59, 0.5);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        padding: 2rem 1.4rem 1.6rem;
+      }
+
+      .name {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="site-header">
-            <h1 class="site-title">Richard Spicer</h1>
-            <p class="site-tagline">MLSecOps Engineer</p>
-        </header>
+  <main class="shell">
+    <h1 class="name">Richard Spicer</h1>
+    <p class="tagline">MLSecOps Engineer</p>
 
-        <!-- Main Content -->
-        <main>
-            <section>
-                <p>Security engineer building expertise in machine learning operations. I focus on the gap between deploying ML systems and securing them—a space where existing frameworks are still catching up.</p>
-            </section>
+    <p class="intro">
+      Building and securing production ML systems.
+    </p>
+    <p class="intro">
+      Focused on bridging the gap between machine learning capabilities and operational security requirements.
+    </p>
 
-            <section>
-                <h2>Projects</h2>
-                
-                <p><strong><a href="https://mlsecopslabs.io">MLSecOps Labs</a></strong><br>
-                Private R&D infrastructure. Proxmox cluster, self-hosted LLMs, GPU workstations, network segmentation. Where everything actually runs.</p>
-                
-                <p><strong><a href="https://mlsecops.fm">MLSecOps Field Manual</a></strong><br>
-                Public documentation and reproducible modules. What I learn in the lab, distilled into patterns others can use.</p>
-            </section>
-
-            <section>
-                <h2>Credentials</h2>
-                <p>
-                    <strong>CISSP</strong> – Certified Information Systems Security Professional<br>
-                    <strong>GCIH</strong> – GIAC Certified Incident Handler<br>
-                    <strong>GSEC</strong> – GIAC Security Essentials
-                </p>
-            </section>
-
-            <section id="how-i-work">
-                <h2>How I Work</h2>
-                
-                <p>I use a <strong>human-led, AI-augmented workflow</strong>. AI assistants help accelerate drafting, code exploration, and research—but every component is validated, rebuilt, and understood by me before it becomes part of a project.</p>
-                
-                <p>I view AI not as a substitute for expertise, but as a tool that amplifies learning and experimentation. All work I present reflects my genuine understanding, my hands-on engineering effort, and my commitment to honest, reproducible practice.</p>
-            </section>
-
-            <section>
-                <h2>Contact</h2>
-                <p>
-                    <strong>Email:</strong> contact@richardspicer.io<br>
-                    <strong>GitHub:</strong> <a href="https://github.com/richardspicer">github.com/richardspicer</a><br>
-                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/richard-spicer-07371212/">LinkedIn</a>
-                </p>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 Richard Spicer</p>
-        </footer>
+    <p class="section-title">Projects</p>
+    <div class="projects">
+      <a class="project-link" href="https://mlsecopslabs.io" target="_blank">
+        🧪 MLSecOps Labs
+        <span>R&D</span>
+      </a>
+      <a class="project-link" href="https://mlsecops.fm" target="_blank">
+        📘 Field Manual
+        <span>Docs</span>
+      </a>
     </div>
+
+    <p class="credentials">CISSP • GCIH • GSEC</p>
+
+    <div class="how-i-work">
+      <p>This work uses AI tools as part of a human-led workflow.</p>
+      <p>All technical decisions and analysis are human-driven; AI assists with drafting and iteration.</p>
+    </div>
+
+    <div class="contact">
+      <a href="mailto:contact@richardspicer.io">Email</a>
+      <a href="https://github.com/richardspicer" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/richard-spicer-07371212/" target="_blank">LinkedIn</a>
+    </div>
+
+    <div class="footer">
+      © 2025 Richard Spicer
+    </div>
+  </main>
 </body>
 </html>
